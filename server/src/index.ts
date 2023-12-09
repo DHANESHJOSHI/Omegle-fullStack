@@ -28,9 +28,7 @@ io.on('connection', (socket) => {
   });
 
 
-
-
-  /// ------- logic for webrtc connection ------
+// Logic part for WebRtc 
 
   // on ice send
   socket.on('ice:send', ({ candidate }) => {
@@ -68,9 +66,11 @@ io.on('connection', (socket) => {
 
   // send message
   socket.on("send-message", (input, type, roomid) => {
-    if (type == 'p1') type = 'You: ';
-    else if (type == 'p2') type = 'Stranger: ';
-    socket.to(roomid).emit('get-message', input, type);
-  })
-
+    if (input.trim() !== '') {
+      if (type == 'p1') type = 'You: ';
+      else if (type == 'p2') type = 'Stranger(Ajanabeee): ';
+      socket.to(roomid).emit('get-message', input, type);
+    }
+  });
+  
 });

@@ -65,7 +65,7 @@ body {
 }
 
 #my-video {
-  background-color: rgb(244, 215, 255);
+  background-color: rgb(30, 33, 206);
   position: absolute;
   bottom: 20px;
   right: 20px;
@@ -73,7 +73,7 @@ body {
   height: 300px;
   border-radius: 999px;
   object-fit: cover;
-  outline: 2px solid violet;
+  outline: 2px solid rgb(6, 22, 161);
   overflow: hidden;
 }
 
@@ -83,7 +83,7 @@ body {
   position: relative;
   overflow: auto;
   scroll-behavior: smooth;
-  border-left: 2px solid lightblue;
+  border-left: 2px solid rgb(173, 191, 230);
 }
 
 .chat-holder .wrapper {
@@ -95,7 +95,7 @@ body {
   bottom: 0;
   display: flex;
   gap: 20px;
-  min-width: 400px;
+  min-width: 80px;
   background-color: white;
   padding: 30px 0;
 }
@@ -111,7 +111,7 @@ input {
   border: none;
   border-radius: 15px;
   font-size: 13px;
-  outline: 2px solid violet;
+  outline: 2px solid rgb(130, 141, 238);
 }
 
 button {
@@ -120,10 +120,10 @@ button {
   padding: 10px 20px;
   font-weight: bold;
   color: white;
-  background-color: blueviolet;
+  background-color: rgb(43, 46, 226);
   border: none;
   border-radius: 10px;
-  outline: 2px solid violet;
+  outline: 2px solid rgb(131, 120, 228);
 }
 
 
@@ -154,5 +154,14 @@ button {
   }
   #video{
     height: 100%;
+  }
+  .chat-holder .input {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    gap: 20px;
+    min-width: 80vw;
+    background-color: white;
+    padding: 30px 0;
   }
 }
